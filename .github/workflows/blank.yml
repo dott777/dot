@@ -1,0 +1,133 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dot的个人网页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7e9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .portfolio-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: white;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>dot的个人网页</h1>
+    </header>
+    <div class="container">
+        <section class="section" id="about">
+            <h2>关于我</h2>
+            <p>大家好，我是dot，一名电商运营。我喜欢电影，徒步登山，看文学类的书，热爱大自然。</p>
+        </section>
+        <section class="section" id="portfolio">
+            <h2>作品集</h2>
+            <div class="portfolio-item">
+                <h3>作品1</h3>
+                <p>这里是作品1的简介。</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>作品2</h3>
+                <p>这里是作品2的简介。</p>
+            </div>
+            <!-- 你可以添加更多作品项 -->
+        </section>
+        <section class="section" id="contact">
+            <h2>联系我</h2>
+            <form class="contact-form">
+                <label for="name">姓名</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">邮箱</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">信息</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">发送</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
